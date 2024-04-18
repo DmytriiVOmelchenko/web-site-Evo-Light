@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  margin: 9px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.menu_icon {
+  /* position: fixed;
+  z-index: 1;
+  top: 20px;
+  right: 20px; */
+  z-index: 2;
+  height: 40px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.menu_icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  margin: 9px 0;
+  transition: 0.3s ease-in-out;
+}
+.menu_icon.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-8px, 8px);
+  background: black;
+}
+.menu_icon.active span:nth-child(2) {
+  width: 0;
+}
+.menu_icon.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -7px);
+  background: black;
+}
+
+.form_popup {
+  position: fixed;
+  bottom: -100%; /* Початкове положення поза видимою областю */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 100;
+  transition: all 1s ease-in-out;
+  animation: fadeIn 0.8s ease;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.form_popup.active {
+  bottom: 0; /* Змінюємо bottom, щоб виїхала знизу вверх */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* .form_popup {
+    position: fixed;
+    top: 25%;
+    left: -100%;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 9;
+    transition: all 1s ease-in-out;
+    animation: fadeIn 0.8s ease;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }  */
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 50%;
+    background-color: #fbfb6f;
+    display: flex;
+    transition: 0.3s ease-in-out;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: grey;
+    font-size: 2rem;
+  }
+  .navigation.active {
+    right: 0;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    width: 100%;
+  }
+}
