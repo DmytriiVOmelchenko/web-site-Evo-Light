@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EvoLight</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="./src/output.css" rel="stylesheet">
+    <link href="./src/css/output.css" rel="stylesheet">
 </head>
 
 <body class="bg-zinc-950 text-gray-400 font-sans 2xl:w-4/5 2xl:px-10 box-border mx-auto">
@@ -20,13 +20,16 @@
                         class="hover:text-black lg:hover:text-yellow-300 xl:text-lg tracking-wider transition font-m"
                         href="#about">Про
                         нас</a></li>
-                <li class="menu_link"><a class=" hover:text-yellow-300 xl:text-lg tracking-wider transition font-m"
+                <li class="menu_link"><a
+                        class="hover:text-black lg:hover:text-yellow-300 xl:text-lg tracking-wider transition font-m"
                         href="#advantages">Переваги</a>
                 </li>
-                <li class="menu_link"><a class=" hover:text-yellow-300 xl:text-lg tracking-wider transition font-m"
+                <li class="menu_link"><a
+                        class="hover:text-black lg:hover:text-yellow-300 xl:text-lg tracking-wider transition font-m"
                         href="#products">Продукція</a>
                 </li>
-                <li class="menu_link"><a class=" hover:text-yellow-300 xl:text-lg tracking-wider transition font-m"
+                <li class="menu_link"><a
+                        class="hover:text-black lg:hover:text-yellow-300 xl:text-lg tracking-wider transition font-m"
                         href="#projects">Рішення</a>
                 </li>
                 <li class="menu_link"><a class=" hover:text-yellow-300  xl:text-lg tracking-wider transition font-m"
@@ -34,9 +37,10 @@
                 </li>
             </ul>
             <div
-                class="flex gap-2 items-center rounded-2xl p-2 bg-yellow-200 hover:bg-yellow-300 text-neutral-950 hover:text-black transition duration-300 hover:shadow-lg hover:shadow-amber-400 max-lg:hidden">
-                <img class="max-h-4 animate-ping w-6 " src="./images/phonecall3_83902.svg" alt="">
-                <button class="action">Замовити рішення</button>
+                class="max-w-max items-center rounded-2xl p-2 bg-yellow-200 hover:bg-yellow-300 text-neutral-950 hover:text-black transition duration-300 hover:shadow-lg hover:shadow-amber-400 max-lg:hidden">
+
+                <button class="action flex gap-2"><img class="max-w-5 h-4 animate-ping"
+                        src="./images/Icons/phonecall.svg" alt="">Замовити рішення</button>
             </div>
             <div class="menu_icon lg:hidden">
                 <span></span>
@@ -47,18 +51,19 @@
 
     <main>
         <section>
-            <div class="relative form_popup flex items-center max-lg:justify-center">
-                <button class="absolute top-1 right-3 close-btn">&times;</button>
-                <form class="flex flex-col p-5 gap-10 max-w-max items-center justify-center" id="tg">
+            <div class="relative form_popup flex items-center justify-center">
+                <button class="absolute top-1 right-3 close-btn"><img class="h-10" src="./images/Icons/icons8-close.svg"
+                        alt=""></button>
+                <form class="flex flex-col  p-5 gap-10 max-w-max items-center justify-center" id="tg">
                     <h3 class="font-bold">Ми Вам зателефонуємо</h3>
-                    <div class="flex max-lg:flex-col gap-4 items-center justify-around">
+                    <div class="flex flex-col max-lg:flex-col gap-4 items-center justify-around">
                         <label class="w-40 text-center font-extrabold text-yellow-400 text-lg" for="name">Ім’я</label>
                         <input
                             class="w-80 p-3 rounded-xl  outline-yellow-200 focus:outline outline-offset-2 text-black  focus:bg-yellow-100"
                             type="text" placeholder="Введіть ваше ім'я" id="name" required>
                     </div>
 
-                    <div class="flex max-lg:flex-col gap-4 items-center justify-center">
+                    <div class="flex flex-col max-lg:flex-col gap-4 items-center justify-center">
                         <label class="w-40  text-center font-extrabold text-yellow-400 text-lg" for="phone">
                             Номер
                             телефону
@@ -72,7 +77,7 @@
                         id="success">Зберегти</button>
                 </form>
             </div>
-            <article class="mb-20" id="about">
+            <article class="mb-20">
                 <div class="text-center">
                     <h1
                         class="max-sm:text-xl text-3xl 2xl:text-5xl text-zinc-300 font-extralight tracking-widest uppercase mb-14">
@@ -90,16 +95,18 @@
                         Складів</h2>
                 </div>
                 <div
-                    class="flex gap-2 mx-auto max-w-max items-center rounded-2xl p-2 bg-yellow-200 hover:bg-yellow-300 text-neutral-950 hover:text-black transition duration-300 hover:shadow-lg hover:shadow-amber-400">
-                    <img class=" max-w-5 h-4 animate-ping w-6" src="./images/phonecall3_83902.svg" alt="">
-                    <button class="action">Замовити рішення</button>
+                    class="mx-auto max-w-max items-center rounded-2xl p-2 bg-yellow-200 hover:bg-yellow-300 text-neutral-950 hover:text-black transition duration-300 hover:shadow-lg hover:shadow-amber-400">
+
+                    <button class="action flex gap-2"><img class="max-w-5 h-4 animate-ping w-6"
+                            src="./images/Icons/phonecall.svg" alt="">Замовити рішення</button>
                 </div>
             </article>
-            <article class="mb-20 max-lg:p-4" id="advantages">
+
+            <article class="mb-20  max-lg:p-4" id="advantages">
                 <h3
-                    class="text-3xl mx-auto max-w-max mb-16 text-zinc-300 font-bold border-b-4 border-b-yellow-200 pb-2">
+                    class="text-3xl mx-auto max-w-max mb-10 text-zinc-300 font-bold border-b-4 border-b-yellow-200 pb-2">
                     Наші переваги</h3>
-                <div class="flex gap-4 justify-between sm:justify-center max-2xl:p-14 max-2xl:gap-10 flex-wrap">
+                <div class="flex gap-4 p-2 justify-between sm:justify-center 2xl:p-14 max-2xl:gap-10 flex-wrap">
                     <div
                         class="max-sm:p-2 flex items-center gap-5 bg-zinc-900 border-2 border-yellow-200 rounded-xl p-5 shadow-sm shadow-yellow-200">
                         <img class="max-sm:h-12 h-24" src="images/Icons/ComputerIcon.png" alt="pjoects icons">
@@ -111,7 +118,7 @@
                         </div>
                     </div>
                     <div
-                        class="max-sm:p-2 flex items-center gap-5 bg-zinc-900 border-2 border-yellow-200 rounded-xl p-5 shadow-sm shadow-yellow-200">
+                        class="max-sm:p-2 max-sm:w-full flex items-center gap-5 bg-zinc-900 border-2 border-yellow-200 rounded-xl p-5 shadow-sm shadow-yellow-200">
                         <img class="max-sm:h-12 h-24" src="images/Icons/LampIcon.png" alt="pjoects icons">
                         <div class="max-sm:w-full w-60">
                             <h4 class="text-lg mb-5">Професіоналізм</h4>
@@ -143,6 +150,50 @@
                     </div>
                 </div>
             </article>
+            <article class="mb-20" id="about">
+                <h3
+                    class="text-3xl mx-auto max-w-max mb-10 text-zinc-300 font-bold border-b-4 border-b-yellow-200 pb-2">
+                    Про нас</h3>
+                <div>
+                    <p class="p-5 md:px-24 text-lg mb-2 leading-8 text-justify tracking-wide"><strong
+                            class="text-yellow-200">Ми –
+                            команда
+                            експертів</strong> з
+                        великим досвідом у
+                        проектуванні,
+                        виробництві
+                        та
+                        впровадженні
+                        інноваційних рішень в галузі
+                        освітлення для торгових мереж, роздрібних магазинів, офісних приміщень та складських просторів.
+                        Звертайтесь до нас, і ми з радістю допоможемо вам втілити ваші ідеї та проекти у життя!</p>
+                    <p class="p-5 md:px-24 text-lg mb-2 leading-8 text-justify tracking-wide"><strong
+                            class="text-yellow-200">Наша
+                            місія
+                            – </strong>створювати
+                        освітлення, що не лише
+                        забезпечує оптимальні умови для роботи і витримує
+                        вимоги сучасних
+                        стандартів, але і відображає індивідуальні потреби та стиль кожного клієнта.</p>
+                    <p class="p-5 md:px-24 text-lg mb-2 leading-8 text-justify tracking-wide"><strong
+                            class="text-yellow-200">Ми
+                            розробляємо та
+                            впроваджуємо</strong>
+                        рішення з
+                        урахуванням ефективності енергоспоживання,
+                        довговічності продукції та
+                        ергономіки освітлення, щоб забезпечити вашому бізнесу конкурентну перевагу та комфорт для
+                        споживачів і працівників.</p>
+                    <p class="p-5 md:px-24 text-lg  leading-8 text-justify tracking-wide"><strong
+                            class="text-yellow-200">Нехай ваш
+                            бізнес сяє</strong> яскравим
+                        світлом
+                        успіху з
+                        нашими інноваційними рішеннями в галузі
+                        професійного освітлення.</p>
+                </div>
+
+            </article>
         </section>
 
         <section class="max-lg:p-5" id="products">
@@ -151,25 +202,25 @@
             </h3>
             <article class="flex justify-center gap-10 sm:gap-10 2xl:flex-row mb-20 flex-wrap">
                 <div class="flex flex-col sm:gap-5 gap-16 2xl:flex-row md:flex-row">
-                    <div class="max-lg:w-52 max-md:mx-auto border-2 flex flex-col gap-10 items-center p-10 rounded-xl transition duration-300
+                    <div class="w-60 md:w-52 max-md:mx-auto border-2 flex flex-col gap-10 items-center p-10 rounded-xl transition duration-300
                     hover:scale-105 hover:shadow-xl hover:shadow-amber-400  2xl:w-96">
-                        <img class="h-28 2xl:h-52 max-w-max" src="./images/lamp/Track.PNG" alt="">
+                        <img class="h-28 md:h-32 2xl:h-52 max-w-max" src="./images/lamp/Track.PNG" alt="">
                         <p class="max-lg:text-lg text-xl tracking-wide">Трековий світильник</p>
                     </div>
-                    <div class="max-lg:w-52 max-md:mx-auto border-2 flex flex-col gap-10 items-center p-10 rounded-xl transition duration-300
+                    <div class="w-60 md:w-52 max-md:mx-auto border-2 flex flex-col gap-10 items-center p-10 rounded-xl transition duration-300
                     hover:scale-105 hover:shadow-xl hover:shadow-amber-400  2xl:w-96">
-                        <img class="h-28 2xl:h-52 max-w-max" src="./images/lamp/model-l-front-1024x5761-1-400x225.png"
+                        <img class="h-28 2xl:h-52 max-w" src="./images/lamp/model-l-front-1024x5761-1-400x225.png"
                             alt="">
                         <p class="max-lg:text-lg text-xl tracking-wide">Лінійний світильник</p>
                     </div>
                 </div>
                 <div class="flex flex-col sm:gap-5 gap-16 2xl:flex-row md:flex-row">
-                    <div class="max-lg:w-52 max-md:mx-auto border-2 flex flex-col gap-10 items-center p-10 rounded-xl transition duration-300
+                    <div class="w-60 md:w-52 max-md:mx-auto border-2 flex flex-col gap-10 items-center p-10 rounded-xl transition duration-300
                     hover:scale-105 hover:shadow-xl hover:shadow-amber-400  2xl:w-96">
                         <img class="h-28 2xl:h-52 max-w-max" src="./images/lamp/susp-img.PNG" alt="">
                         <p class="max-lg:text-lg text-xl tracking-wide">Підвісний світильник</p>
                     </div>
-                    <div class="max-lg:w-52 max-md:mx-auto border-2 flex flex-col gap-10 items-center p-10 rounded-xl transition duration-300
+                    <div class="w-60 md:w-52 max-md:mx-auto border-2 flex flex-col gap-10 items-center p-10 rounded-xl transition duration-300
                     hover:scale-105 hover:shadow-xl hover:shadow-amber-400  2xl:w-96">
                         <img class="h-28 2xl:h-52 max-w-max" src="./images/lamp/spot.png" alt="">
                         <p class="max-lg:text-lg text-xl tracking-wide">Вбудований світильник</p>
@@ -183,115 +234,104 @@
             </h3>
 
             <div class="swiper max-2xl:px-4 ">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper flex items-center ">
-                    <!-- Slides -->
                     <div class="swiper-slide max-md:flex-col flex mb-20 text-justify text-lg items-center">
                         <img class="max-md:w-8/12 w-6/12 rounded-xl"
-                            src="images/projects-img/retaillighting_inext_1.jpeg" alt="">
+                            src="images/projects-img/retaillighting_inext_1.jpg" alt="">
                         <div class="p-10">
-                            <h4 class="text-2xl text-center mb-5">Lorem </h4>
-                            <p class="max-md:w-8/12 max-md:mx-auto max-md:text-base text-center"><strong>Lorem</strong>
-                                , ipsum dolor
-                                sit amet
-                                consectetur
-                                adipisicing elit. Nulla, vero
-                                voluptate
-                                placeat laboriosam ex
-                                et sapiente commodi, soluta, quia nisi est dolores voluptatibus. Ut aperiam
-                                reprehenderit
-                                impedit.
+                            <h4 class="text-2xl text-center mb-5">Освітлення магазину</h4>
+                            <p class="text-xs text-start max-md:w-11/12 max-md:mx-auto md:text-base sm:text-justify ">
+                                <strong class="text-yellow-200">Професійне освітлення магазину – це:</strong>
+                                акценти на товарах: Світлодіоди підкреслюють продукцію.
+                                Кольорова гармонія: Правильне світло підкреслює кольори товарів.
+                                Ефективність і яскравість: Рівномірне та інтенсивне освітлення.
+                                Це створює привабливу атмосферу для клієнтів.
 
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide max-md:flex-col flex mb-20 text-justify text-lg items-center">
-                        <img class="max-md:w-8/12 w-6/12 rounded-xl" src="images/projects-img/Cafe.jpeg" alt="">
+                        <img class="max-md:w-8/12 w-6/12 rounded-xl" src="images/projects-img/office.jpg" alt="">
                         <div class="p-10">
-                            <h4 class="text-2xl text-center mb-5">Lorem </h4>
-                            <p class="max-md:w-8/12 max-md:mx-auto max-md:text-base text-center"><strong>Lorem</strong>
-                                , ipsum dolor
-                                sit amet
-                                consectetur
-                                adipisicing elit. Nulla, vero
-                                voluptate
-                                placeat laboriosam ex
-                                et sapiente commodi, soluta, quia nisi est dolores voluptatibus. Ut aperiam
-                                reprehenderit
-                                impedit.
-
+                            <h4 class="text-2xl text-center mb-5">Освітлення офісу </h4>
+                            <p class="text-xs text-start max-md:w-11/12 max-md:mx-auto md:text-base sm:text-justify ">
+                                <strong class="text-yellow-200">Професійне освітлення офісу:</strong>
+                                комфорт і продуктивність: Світлодіоди забезпечують природне та ергономічне освітлення.
+                                Мінімізація втоми: Освітлення регулюється для зменшення напруження очей.
+                                Ефективність і економія: Енергоефективні світильники допомагають зменшити витрати.
+                                Це створює зручні умови для роботи та підвищує продуктивність колективу.
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide max-md:flex-col flex mb-20 text-justify text-lg items-center">
-                        <img class=" max-md:w-8/12 w-6/12 rounded-xl" src="images/projects-img/office.jpeg" alt="">
+                        <img class=" max-md:w-8/12 w-6/12 rounded-xl" src="images/projects-img/Cafe.jpg" alt="">
                         <div class="p-10">
-                            <h4 class="text-2xl text-center mb-5">Lorem </h4>
-                            <p class="max-md:w-8/12 max-md:mx-auto max-md:text-base text-center"><strong>Lorem</strong>
-                                , ipsum dolor
-                                sit amet
-                                consectetur
-                                adipisicing elit. Nulla, vero
-                                voluptate
-                                placeat laboriosam ex
-                                et sapiente commodi, soluta, quia nisi est dolores voluptatibus. Ut aperiam
-                                reprehenderit
-                                impedit.
-
+                            <h4 class="text-2xl text-center mb-5">Освітлення кафе</h4>
+                            <p class="text-xs text-start max-md:w-11/12 max-md:mx-auto md:text-base sm:text-justify ">
+                                <strong class="text-yellow-200">Професійне освітлення кафе:</strong>
+                                атмосфера тепла: Світлодіоди створюють затишне освітлення.
+                                Акцент на деталях: Світлові акценти підкреслюють інтер'єр та декор.
+                                Зручність і естетика: Освітлення сприяє комфорту та гармонії.
+                                Це створює неповторну атмосферу для гостей кафе.
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide max-md:flex-col flex mb-20 text-justify text-lg items-center">
-                        <img class="max-md:w-8/12 w-6/12 rounded-xl" src="images/projects-img/barbershop.jpeg" alt="">
+                        <img class="max-md:w-8/12 w-6/12 rounded-xl" src="images/projects-img/barbershop.jpg" alt="">
                         <div class="p-10">
-                            <h4 class="text-2xl text-center mb-5">Lorem </h4>
-                            <p class="max-md:w-8/12 max-md:mx-auto max-md:text-base text-center"><strong>Lorem</strong>
-                                , ipsum dolor
-                                sit amet
-                                consectetur
-                                adipisicing elit. Nulla, vero
-                                voluptate
-                                placeat laboriosam ex
-                                et sapiente commodi, soluta, quia nisi est dolores voluptatibus. Ut aperiam
-                                reprehenderit
-                                impedit.
-
+                            <h4 class="text-2xl text-center mb-5">Освітлення барбершопу</h4>
+                            <p class="text-xs text-start max-md:w-11/12 max-md:mx-auto md:text-base sm:text-justify ">
+                                <strong class="text-yellow-200">Професійне освітлення барбершопу:</strong>
+                                виразність стилю: Світлодіоди створюють атмосферу стилю та маскулінності.
+                                Підкреслення деталей: Світлові акценти підкреслюють інтер'єр та обладнання.
+                                Комфорт клієнтів і майстрів: Освітлення створює зручні умови для роботи та відпочинку.
+                                Це створює неповторну атмосферу для клієнтів та майстрів барбершопу.
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide max-md:flex-col flex mb-20 text-justify text-lg items-center">
-                        <img class="max-md:w-8/12 w-6/12 rounded-xl" src="images/projects-img/restaraunt.png" alt="">
+                        <img class="max-md:w-8/12 w-6/12 rounded-xl" src="images/projects-img/restaraunt (1).png"
+                            alt="">
                         <div class="p-10">
-                            <h4 class="text-2xl text-center mb-5">Lorem </h4>
-                            <p class="max-md:w-8/12 max-md:mx-auto max-md:text-base text-center"><strong>Lorem</strong>
-                                , ipsum dolor
-                                sit amet
-                                consectetur
-                                adipisicing elit. Nulla, vero
-                                voluptate
-                                placeat laboriosam ex
-                                et sapiente commodi, soluta, quia nisi est dolores voluptatibus. Ut aperiam
-                                reprehenderit
-                                impedit.
-
+                            <h4 class="text-2xl text-center mb-5">Освітлення ресторану</h4>
+                            <p class="text-xs text-start max-md:w-11/12 max-md:mx-auto md:text-base sm:text-justify ">
+                                <strong class="text-yellow-200">Професійне освітлення ресторану:</strong>
+                                Атмосфера затишку: Світлодіоди створюють приголомшливу атмосферу.
+                                Підкреслення архітектури: Світлові акценти підкреслюють дизайн та елегантність
+                                приміщення.
+                                Комфорт та інтимність: Освітлення створює затишну атмосферу для вечері.
+                                Це створює неповторну атмосферу для гостей ресторану.
                             </p>
                         </div>
                     </div>
                 </div>
-                <!-- If we need pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
-
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
 
-                <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
         </section>
+        <section>
+            <article class="border-2">
+                <h4 class="text-xl text-center mt-5 mb-6">Готові розпочати співпрацю?</h4>
+                <div class="w-6/12 mx-auto  ">
+                    <p class="md:px-24 text-lg  leading-8 text-justify tracking-wide mb-10">Швидко та ефективно
+                        реалізуємо
+                        ваші проекти з освітленням. Заповніть форму зворотнього зв’язку
+                        нижче, і ми з радістю з
+                        вами сконтактуємося.</p>
+                    <div
+                        class="mx-auto max-w-max items-center rounded-2xl p-2 bg-yellow-200 hover:bg-yellow-300 text-neutral-950 hover:text-black transition duration-300 hover:shadow-lg hover:shadow-amber-400 mb-16">
+
+                        <button class="action flex gap-2"><img class="max-w-5 h-4 animate-ping w-6"
+                                src="./images/Icons/phonecall.svg" alt="">Замовити рішення</button>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
-        <div class="flex justify-between items-center border-t-2 border-gray-900 pb-10 border-b">
+        <div id="contacts" class="flex justify-between items-center border-t-2 border-gray-900 pb-10 border-b">
             <div>
                 <h4 class="max-2xl:p-3 text-lg font-bold mb-3">Контакти</h4>
                 <ul class="max-2xl:p-3 flex flex-col gap-2">

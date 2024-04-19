@@ -20,10 +20,6 @@ span {
 }
 
 .menu_icon {
-  /* position: fixed;
-  z-index: 1;
-  top: 20px;
-  right: 20px; */
   z-index: 2;
   height: 40px;
   width: 28px;
@@ -54,18 +50,23 @@ span {
   position: fixed;
   bottom: -100%; /* Початкове положення поза видимою областю */
   left: 0;
-  width: 100%;
+  width: 40%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.3);
   z-index: 100;
-  transition: all 1s ease-in-out;
-  animation: fadeIn 0.8s ease;
+  transition: all 0.2s ease;
+  animation: fadeIn 0.3s ease;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
 
 .form_popup.active {
   bottom: 0; /* Змінюємо bottom, щоб виїхала знизу вверх */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: yellow;
 }
 
 @keyframes fadeIn {
@@ -78,20 +79,19 @@ span {
 }
 
 @media (max-width: 1024px) {
-  /* .form_popup {
+  .form_popup {
     position: fixed;
-    top: 25%;
-    left: -100%;
-    width: 100vw;
+    bottom: -100%; /* Початкове положення поза видимою областю */
+    left: 0;
+    width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.3);
-    z-index: 9;
-    transition: all 1s ease-in-out;
-    animation: fadeIn 0.8s ease;
-    border-radius: 15px;
+    z-index: 100;
+    transition: all 0.2s ease;
+    animation: fadeIn 0.3s ease;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-  }  */
+  }
   .navigation {
     position: fixed;
     top: 0;

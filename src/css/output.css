@@ -623,6 +623,14 @@ video {
   margin-top: 1.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -643,6 +651,10 @@ video {
   height: 2.5rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -653,14 +665,6 @@ video {
 
 .h-4 {
   height: 1rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.max-h-4 {
-  max-height: 1rem;
 }
 
 .w-40 {
@@ -685,6 +689,22 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
 }
 
 .max-w-5 {
@@ -763,6 +783,10 @@ video {
   border-width: 2px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -783,6 +807,11 @@ video {
 .border-yellow-200 {
   --tw-border-opacity: 1;
   border-color: rgb(254 240 138 / var(--tw-border-opacity));
+}
+
+.border-slate-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 6 23 / var(--tw-border-opacity));
 }
 
 .border-b-yellow-200 {
@@ -852,6 +881,10 @@ video {
   text-align: justify;
 }
 
+.text-start {
+  text-align: start;
+}
+
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -881,6 +914,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -895,6 +933,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .tracking-wide {
@@ -927,6 +969,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-yellow-200 {
+  --tw-text-opacity: 1;
+  color: rgb(254 240 138 / var(--tw-text-opacity));
 }
 
 .text-yellow-400 {
@@ -988,10 +1035,6 @@ span {
 }
 
 .menu_icon {
-  /* position: fixed;
-  z-index: 1;
-  top: 20px;
-  right: 20px; */
   z-index: 2;
   height: 40px;
   width: 28px;
@@ -1026,12 +1069,12 @@ span {
   bottom: -100%;
   /* Початкове положення поза видимою областю */
   left: 0;
-  width: 100%;
+  width: 40%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.3);
   z-index: 100;
-  transition: all 1s ease-in-out;
-  animation: fadeIn 0.8s ease;
+  transition: all 0.2s ease;
+  animation: fadeIn 0.3s ease;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
@@ -1039,6 +1082,11 @@ span {
 .form_popup.active {
   bottom: 0;
   /* Змінюємо bottom, щоб виїхала знизу вверх */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: yellow;
 }
 
 @keyframes fadeIn {
@@ -1052,20 +1100,20 @@ span {
 }
 
 @media (max-width: 1024px) {
-  /* .form_popup {
+  .form_popup {
     position: fixed;
-    top: 25%;
-    left: -100%;
-    width: 100vw;
+    bottom: -100%;
+    /* Початкове положення поза видимою областю */
+    left: 0;
+    width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.3);
-    z-index: 9;
-    transition: all 1s ease-in-out;
-    animation: fadeIn 0.8s ease;
-    border-radius: 15px;
+    z-index: 100;
+    transition: all 0.2s ease;
+    animation: fadeIn 0.3s ease;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-  }  */
+  }
 
   .navigation {
     position: fixed;
@@ -1145,10 +1193,6 @@ span {
 }
 
 @media not all and (min-width: 1536px) {
-  .max-2xl\:justify-center {
-    justify-content: center;
-  }
-
   .max-2xl\:gap-10 {
     gap: 2.5rem;
   }
@@ -1157,41 +1201,9 @@ span {
     padding: 0.75rem;
   }
 
-  .max-2xl\:p-14 {
-    padding: 3.5rem;
-  }
-
-  .max-2xl\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
   .max-2xl\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-}
-
-@media not all and (min-width: 1280px) {
-  .max-xl\:justify-center {
-    justify-content: center;
-  }
-
-  .max-xl\:p-2 {
-    padding: 0.5rem;
-  }
-
-  .max-xl\:p-3 {
-    padding: 0.75rem;
-  }
-
-  .max-xl\:p-10 {
-    padding: 2.5rem;
-  }
-
-  .max-xl\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 }
 
@@ -1200,16 +1212,8 @@ span {
     display: none;
   }
 
-  .max-lg\:w-52 {
-    width: 13rem;
-  }
-
   .max-lg\:flex-col {
     flex-direction: column;
-  }
-
-  .max-lg\:justify-center {
-    justify-content: center;
   }
 
   .max-lg\:p-4 {
@@ -1236,6 +1240,18 @@ span {
     width: 66.666667%;
   }
 
+  .max-md\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .max-md\:w-11\/12 {
+    width: 91.666667%;
+  }
+
+  .max-md\:w-9\/12 {
+    width: 75%;
+  }
+
   .max-md\:flex-col {
     flex-direction: column;
   }
@@ -1243,6 +1259,11 @@ span {
   .max-md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .max-md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1253,10 +1274,6 @@ span {
 
   .max-sm\:w-full {
     width: 100%;
-  }
-
-  .max-sm\:p-0 {
-    padding: 0px;
   }
 
   .max-sm\:p-2 {
@@ -1286,15 +1303,33 @@ span {
   .sm\:gap-5 {
     gap: 1.25rem;
   }
+
+  .sm\:text-justify {
+    text-align: justify;
+  }
 }
 
 @media (min-width: 768px) {
+  .md\:h-32 {
+    height: 8rem;
+  }
+
+  .md\:w-52 {
+    width: 13rem;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
 
-  .md\:justify-center {
-    justify-content: center;
+  .md\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1322,20 +1357,6 @@ span {
 }
 
 @media (min-width: 1280px) {
-  .xl\:justify-center {
-    justify-content: center;
-  }
-
-  .xl\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1361,6 +1382,10 @@ span {
 
   .\32xl\:gap-12 {
     gap: 3rem;
+  }
+
+  .\32xl\:p-14 {
+    padding: 3.5rem;
   }
 
   .\32xl\:px-10 {
