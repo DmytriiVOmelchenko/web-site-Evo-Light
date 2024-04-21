@@ -88,8 +88,6 @@ document.getElementById('tg').addEventListener('submit', function (e) {
   message += `<b>Ім’я</b> ${this.name.value}\n`;
   message += `<b>Номер телефону</b> ${this.phone.value}`;
 
-  console.log(message);
-
   axios
     .post(URI_API, {
       chat_id: chatId,
@@ -107,6 +105,7 @@ document.getElementById('tg').addEventListener('submit', function (e) {
     })
     .finally(() => {
       console.log('Виконано');
+      body.classList.remove('lock');
       form.classList.remove('active');
     });
 });
